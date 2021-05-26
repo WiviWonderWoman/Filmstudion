@@ -1,0 +1,244 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(78, 84, 84);
+    color: cornsilk;
+    font-family: sans-serif;
+}
+
+header, nav, article, footer {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    border: cornsilk solid 1px;
+    border-radius: 10px;
+    background-color: black;
+    padding: 20px;
+}
+
+input {
+    font-family: 'Amatic SC';
+    font-size: 1em;
+    width: auto;
+    border-radius: 10px;
+}
+
+#content {
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+}
+
+#intro ul li {
+    list-style: none;
+}
+
+#movie {
+    background-color: rgb(78, 84, 84);
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+    border: cornsilk solid 1px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+#rentDiv {
+    background-color: rgb(78, 84, 84);
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+    border: cornsilk solid 1px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+#returnDiv {
+    background-color: rgb(78, 84, 84);
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+    border: cornsilk solid 1px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.message {
+    color: palegreen;
+}
+
+#movie2 {
+    background-color: rgb(61, 64, 64);
+    color: lightgrey;
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+    border: lightgrey solid 1px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+#studio {
+    background-color: rgb(78, 84, 84);
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+    border: cornsilk solid 1px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+#loginMessage {
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+    width: 30%;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+#rentMessage {
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+    width: 30%;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+#loginForm {
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+    width: 30%;
+    margin: 2em auto;
+    border: cornsilk solid 1px;
+    padding: 1em;
+}
+
+#registerForm {
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+    width: 30%;
+    margin: 2em auto;
+    border: cornsilk solid 1px;
+    padding: 1em;
+}
+
+.form-group {
+    font-family: 'Amatic SC';
+    font-size: 1.5em;
+}
+
+input {
+    font-size: 1em;
+    width: 100%;
+}
+
+header, footer {
+    justify-content: center;
+}
+
+header {
+    height: 5%;
+}
+
+footer {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Amatic SC';
+    font-size: 2em;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+}
+
+#spanEmail {
+    font-family: 'Amatic SC';
+    font-size: 1.2em;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+#spanStudio {
+    font-family: 'Amatic SC';
+    font-size: 1.5em;
+    font-style: italic;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+img {
+    width: 400px;
+}
+
+#copy {
+    font-size: 15px;
+    text-align: center;
+}
+   
+    #copy span {
+        font-family: 'Tangerine', cursive;
+        font-size: large;
+    }
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+   
+    .flex-container ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+        
+        .flex-container ul li {
+            flex-grow: 1;
+            list-style: none;
+        }
+    
+    .flex-container button {
+        margin: 5px;
+        border: cornsilk solid 2px;
+        border-radius: 10%;
+        background-color: rgb(38, 39, 41);
+        color: cornsilk;
+        font-family: 'Amatic SC';
+        font-size: 2em;
+        text-decoration: none;
+    }
+    
+    .flex-container ul li button:hover {
+        background-color: cornsilk;
+        color: black;
+    }
+
+button {
+    margin: 5px;
+    border: cornsilk solid 2px;
+    border-radius: 10%;
+    background-color: rgb(38, 39, 41);
+    color: cornsilk;
+    font-family: 'Amatic SC';
+    font-size: 2em;
+    text-decoration: none;
+}
+
+    button:hover {
+        background-color: cornsilk;
+        color: black;
+    }
+
+
+

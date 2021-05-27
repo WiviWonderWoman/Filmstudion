@@ -4,7 +4,7 @@ Dynamiska Webbsystem 2 - mars 2021
 1.  43/100 (komplettering)
 2.  100/100 (VG) 
 ### Senario
-I detta påhittade uppdrag så ska du skapa en webbapplikation riktad till föreningar som är anslutna till Sveriges Förenade Filmstudios (Länkar till en externa sida.) (SFF) där man via ett API och klientgränssnitt kan boka/beställa filmer till sin förening.
+I detta påhittade uppdrag så ska du skapa en webbapplikation riktad till föreningar som är anslutna till Sveriges Förenade Filmstudios (SFF) där man via ett API och klientgränssnitt kan boka/beställa filmer till sin förening.
 
 SFF fungerar så att lokala filmintresserade bildar föreningar (en filmstudio), dessa föreningar ingår i medlemskap hos SFF som är förbund för alla filmstudios i Sverige. SFF köper rättigheter från filmdistributörerer att låna ett visst antal exemplar av olika filmer, som SFF sen skickar till lokala föreningar. Filmstudion visar sedan dem på på exempelvis kulturhus och mindre biografer runt om i landet.
 

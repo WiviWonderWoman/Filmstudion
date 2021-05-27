@@ -9,6 +9,94 @@ I detta påhittade uppdrag så ska du skapa en webbapplikation riktad till före
 SFF fungerar så att lokala filmintresserade bildar föreningar (en filmstudio), dessa föreningar ingår i medlemskap hos SFF som är förbund för alla filmstudios i Sverige. SFF köper rättigheter från filmdistributörerer att låna ett visst antal exemplar av olika filmer, som SFF sen skickar till lokala föreningar. Filmstudion visar sedan dem på på exempelvis kulturhus och mindre biografer runt om i landet.
 
 Förut skedde detta via blanketter, och filmerna man kunde låna fraktades som stora filmrullar, varför filmer bara kunde visas samtidigt på ett begränsat antal ställen i taget. I dag skickas, och visas, filmerna digitalt - men avtalen ser fortfarande likadana ut; så SFF måste begränsa hur många filmstudios som samtidigt kan visa en viss film!
+________________________________________________________________________________________________________________________________________________________________________________
+http://localhost:6600/api/v1
+# Åtkomstpunkter
+## PUBLIC
+### /public/filmStudios
+    # GET 
+    hämtar alla FilmStudios
+### /public/filmStudios/{filmStudioId}
+    # GET 
+    hämtar en specifik FilmSudio
+### /public/movies
+    # GET 
+    hämtar alla Movies
+### /public/movies/{moveId}
+    # GET 
+    hämtar en specifik Movie
+
+## USER
+### /users/register
+    # POST
+    För att registrera ny filmstudio-användare, body:
+    {
+        "name": "string",
+        "location": "string",
+        "chairpersonName": "string",
+        "email": "email",
+        "password": "string"
+    }
+### /user/register/admin
+    #POST
+    För att registrera administratör
+    {
+        "email": "email",
+        "password": "string"
+    }
+    
+### /users/authenticate
+    # POST
+    För att autesiera användare , body:
+    {
+        "email": "string",
+        "password": "string"
+    }
+
+## AUTENSIERADE ANVÄNDARE
+### /filmcopies/{moveId}
+    # GET 
+    hämtar en specifik Movie inklusive antalet lediga exemplar
+    
+### /filmcopies
+    # GET 
+    Hämtar utlånade FilmCopies, Admin = alla, Filmstudio = sina egna lån
+    
+###  /movies
+    # GET
+    hämtar alla Movies inklusive antalet tillgängliga filmCopies
+    
+###  /movies
+    # POST 
+    Lägger till ny Movie - FilmCopies genereas automatiskt, body: 
+    {
+        "title": "string",
+        "releaseYear": 0,
+        "country": "string",
+        "director": "string",
+        "amountOfCopies": 0
+    }
+
+### /movies/{moveId}
+    # PUT 
+    uppdaterar information, om AmountOfCopies ändras - FilmCopies genereas/elimeneras automatiskt, body:
+    {
+        "title": "string",
+        "releaseYear": 0,
+        "country": "string",
+        "director": "string",
+        "amountOfCopies": 0
+    }
+
+### /FilmCopies/{movieId}/rent
+    # PUT 
+    hyr Movie
+    
+### /FilmCopies/{movieId}/return
+    # PUT 
+    lämna tillbaka Movie
+_______________________________________________________________________________________________________________________________________________________________________________
+
 ### Kravlista:
 * Det inlämande git-repot ska innehålla ett Webb-API skapats med ASP.NET och som går att starta med .NET Core 3 eller .NET 5.
 * API:et ska tillhandahålla resursena "film" och "filmstudio"
@@ -45,89 +133,3 @@ Förut skedde detta via blanketter, och filmerna man kunde låna fraktades som s
 finns tillgänglig vid anrop till API:et? samt hur inloggning och utloggning fungerar i klientgränsnittet.
 * I reflections-filen under rubkriken "Klientgränsnitt" har du motiverat hur du tänkt kring användarbarheten i din klientapplikation utifrån ovanstående kravlista, vad var
 viktigast att få med? Anser du att gränssnittet är användarvänligt?
-________________________________________________________________________________________________________________________________________________________________________________
-http://localhost:6600/api/v1
-
-# PUBLIC
-## /public/filmStudios
-    # GET 
-    hämtar alla FilmStudios
-## /public/filmStudios/{filmStudioId}
-    # GET 
-    hämtar en specifik FilmSudio
-## /public/movies
-    # GET 
-    hämtar alla Movies
-## /public/movies/{moveId}
-    # GET 
-    hämtar en specifik Movie
-
-# USER
-## /users/register
-    # POST
-    För att registrera ny filmstudio-användare, body:
-    {
-        "name": "string",
-        "location": "string",
-        "chairpersonName": "string",
-        "email": "email",
-        "password": "string"
-    }
-## /user/register/admin
-    #POST
-    För att registrera administratör
-    {
-        "email": "email",
-        "password": "string"
-    }
-    
-## /users/authenticate
-    # POST
-    För att autesiera användare , body:
-    {
-        "email": "string",
-        "password": "string"
-    }
-
-# AUTENSIERADE ANVÄNDARE
-## /filmcopies/{moveId}
-    # GET 
-    hämtar en specifik Movie inklusive antalet lediga exemplar
-    
-## /filmcopies
-    # GET 
-    Hämtar utlånade FilmCopies, Admin = alla, Filmstudio = sina egna lån
-    
-##  /movies
-    # GET
-    hämtar alla Movies inklusive antalet tillgängliga filmCopies
-    
-##  /movies
-    # POST 
-    Lägger till ny Movie - FilmCopies genereas automatiskt, body: 
-    {
-        "title": "string",
-        "releaseYear": 0,
-        "country": "string",
-        "director": "string",
-        "amountOfCopies": 0
-    }
-
-## /movies/{moveId}
-    # PUT 
-    uppdaterar information, om AmountOfCopies ändras - FilmCopies genereas/elimeneras automatiskt, body:
-    {
-        "title": "string",
-        "releaseYear": 0,
-        "country": "string",
-        "director": "string",
-        "amountOfCopies": 0
-    }
-
-## /FilmCopies/{movieId}/rent
-    # PUT 
-    hyr Movie
-    
-## /FilmCopies/{movieId}/return
-    # PUT 
-    lämna tillbaka Movie
